@@ -60,10 +60,11 @@ There is no particular requirement beyond the fact that you should have a workin
 
 ### Installing
 
-Download base64url source by running
+Download base64url source by running, assuming you have git installed
 
 ```shell
-go get -u github.com/theovassiliou/base64url
+cd $GOPATH/src/github.com/theovassiliou
+git clone https://github.com/theovassiliou/base64url.git
 ```
 
 This gets you your copy of base64url installed under
