@@ -12,7 +12,6 @@ Note: To decode hard wrapped encoded data, line breaks are removed before decodi
 
     Options:
     --decode, -d        decodes input
-    --log-level, -l     Log level, one of panic, fatal, error, warn or warning, info, debug, trace
     --input, -i         input file ("-" for stdin, default -)
     --output, -o        output file ("-" for stdout, default -)
     --break, -b         Insert line breaks every count characters.  Default is 0, which generates an

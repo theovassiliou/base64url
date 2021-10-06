@@ -7,7 +7,6 @@ import (
 	"os"
 	"strings"
 
-	log "github.com/sirupsen/logrus"
 	"github.com/theovassiliou/base64url"
 
 	"github.com/jpillora/opts"
@@ -43,20 +42,18 @@ var (
 )
 
 type config struct {
-	Decode   bool      `help:"decodes input"`
-	LogLevel log.Level `help:"Log level, one of panic, fatal, error, warn or warning, info, debug, trace"`
-	Input    string    `help:"input file (\"-\" for stdin)"`
-	Output   string    `help:"output file (\"-\" for stdout)"`
-	Break    int       `help:"Insert line breaks every count characters.  Default is 0, which generates an unbroken stream"`
+	Decode bool   `help:"decodes input"`
+	Input  string `help:"input file (\"-\" for stdin)"`
+	Output string `help:"output file (\"-\" for stdout)"`
+	Break  int    `help:"Insert line breaks every count characters.  Default is 0, which generates an unbroken stream"`
 }
 
 func main() {
 	conf = config{
-		LogLevel: log.ErrorLevel,
-		Decode:   false,
-		Input:    "-",
-		Output:   "-",
-		Break:    0,
+		Decode: false,
+		Input:  "-",
+		Output: "-",
+		Break:  0,
 	}
 
 	//parse config
@@ -64,8 +61,6 @@ func main() {
 		Repo(repoName).
 		Version(FormatFullVersion("base64url", version, branch, commit)).
 		Parse()
-
-	log.SetLevel(conf.LogLevel)
 
 	inputFile := os.Stdin
 	if conf.Input != "-" {
