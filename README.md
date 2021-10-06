@@ -7,6 +7,7 @@ WARNING: THIS SOFTWARE CAN'T BE ERROR-FREE, SO USE IT AT YOUR OWN RISK. I HAVE D
 
 ## Sample usage of library
 
+```go
     package main
 
     import (
@@ -39,6 +40,7 @@ WARNING: THIS SOFTWARE CAN'T BE ERROR-FREE, SO USE IT AT YOUR OWN RISK. I HAVE D
         fmt.Println(string(decodedOutput))
 
     }
+```
 
 ## Installation binaries
 
