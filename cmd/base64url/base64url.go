@@ -8,6 +8,7 @@ import (
 	"strings"
 
 	"github.com/theovassiliou/base64url"
+	exitcodes "github.com/theovassiliou/go-exitcodes"
 
 	"github.com/jpillora/opts"
 )
@@ -67,7 +68,7 @@ func main() {
 		i, err := os.Open(conf.Input)
 		if err != nil {
 			fmt.Printf("%v\n", err)
-			os.Exit(66)
+			os.Exit(exitcodes.CANT_OPEN_INPUT)
 		}
 		inputFile = i
 	}
@@ -78,7 +79,7 @@ func main() {
 		i, err := os.Create(conf.Output)
 		if err != nil {
 			fmt.Printf("%v\n", err)
-			os.Exit(66)
+			os.Exit(exitcodes.CANT_CREATE_OUTPUT_FILE)
 		}
 		outputFile = i
 	}
@@ -92,7 +93,7 @@ func main() {
 		output, err := base64url.Decode(strings.ReplaceAll(n, "\n", ""))
 		if err != nil {
 			fmt.Printf("%v\n", err)
-			os.Exit(65)
+			os.Exit(exitcodes.DATA_FORMAT_ERROR)
 		}
 		outputFile.Write(output)
 	} else {

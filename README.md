@@ -1,7 +1,6 @@
 # base64url
 
-base64url, implemented in go (golang) is a small library supporting base64url encoding and decoding (collectively called coding). In addition,
-it is a command-line tool similar to BSD's `base64` tool.
+base64url, implemented in go (golang) is a small library supporting base64url encoding and decoding (collectively called coding). In addition, it is a command-line tool similar to BSD's `base64` tool.
 
 WARNING: THIS SOFTWARE CAN'T BE ERROR-FREE, SO USE IT AT YOUR OWN RISK. I HAVE DONE MY BEST TO MAKE SURE THAT THE TOOLS BEHAVE AS EXPECTED. BUT AGAIN ... USE IT AT YOUR OWN RISK. I AM NOT GIVING ANY KIND OF WARRANTY, NEITHER EXPLICITLY NOR IMPLICITLY.
 
@@ -77,9 +76,7 @@ cd $GOPATH/src/github.com/theovassiliou/base64url
 make all
 ```
 
-to compile and build the executable
-
-* base64url - [README](cmd/base64url/README.md)
+to compile and build the executable `base64url`
 
 and run
 
@@ -88,6 +85,8 @@ make go-install
 ```
 
 to install a copy of the executable into `$GOPATH/bin`
+
+For information on how to use the executable  `base64url` consult the [README](cmd/base64url/README.md))
 
 ## Running the tests
 
