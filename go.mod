@@ -1,15 +1,11 @@
 module github.com/theovassiliou/base64url
 
-go 1.17
+go 1.13
 
 require (
+	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/hashicorp/errwrap v1.1.0 // indirect
+	github.com/hashicorp/go-multierror v1.1.1 // indirect
 	github.com/jpillora/opts v1.2.0
-	github.com/sirupsen/logrus v1.8.1
-)
-
-require (
-	github.com/hashicorp/errwrap v1.0.0 // indirect
-	github.com/hashicorp/go-multierror v1.0.0 // indirect
-	github.com/posener/complete v1.2.2-0.20190308074557-af07aa5181b3 // indirect
-	golang.org/x/sys v0.0.0-20191026070338-33540a1f6037 // indirect
+	github.com/posener/complete v1.2.3 // indirect
 )

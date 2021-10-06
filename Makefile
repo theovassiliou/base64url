@@ -36,11 +36,11 @@ deps:
 
 .PHONY: base64url
 base64url:
-	go build -ldflags "$(LDFLAGS)" ./base64urlcmd/base64url.go
+	go build -ldflags "$(LDFLAGS)" ./cmd/base64url/base64url.go
 
 .PHONY: go-install
 go-install:
-	go install -ldflags "-w -s $(LDFLAGS)" ./base64urlcmd/base64url.go
+	go install -ldflags "-w -s $(LDFLAGS)" ./cmd/base64url/base64url.go
 
 .PHONY: install
 install: base64url
@@ -55,7 +55,7 @@ uninstall:
 
 .PHONY: test
 test:
-	go test -short ./...
+	go test -short `go list`
 
 .PHONY: fmt
 fmt:
@@ -96,7 +96,7 @@ check: fmtcheck vet
 
 .PHONY: test-all
 test-all: fmtcheck vet
-	go test ./...
+	go test `go list`
 
 .PHONY: clean
 clean:
@@ -109,4 +109,4 @@ static:
 	@CGO_ENABLED=0 \
 	GOOS=linux \
 	GOARCH=amd64 \
-	go build -ldflags "$(LDFLAGS)" ./base64urlcmd/base64url.go
+	go build -ldflags "$(LDFLAGS) -s -w" ./cmd/base64url/base64url.go
