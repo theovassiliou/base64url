@@ -5,7 +5,6 @@ import (
 	"os"
 
 	"github.com/theovassiliou/base64url"
-	exitcodes "github.com/theovassiliou/go-exitcodes"
 )
 
 const testString = "A text content to be base64url encoded"
@@ -21,7 +20,7 @@ func main() {
 
 	if err != nil {
 		fmt.Println(err)
-		os.Exit(exitcodes.DATA_FORMAT_ERROR)
+		os.Exit(1)
 	}
 
 	fmt.Println(string(decodedOutput))
