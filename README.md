@@ -63,7 +63,7 @@ There is no particular requirement beyond the fact that you should have a workin
 Download base64url source by running
 
 ```shell
-go get -u github.com/theovassiliou/bae64url
+go get -u github.com/theovassiliou/base64url
 ```
 
 This gets you your copy of base64url installed under
