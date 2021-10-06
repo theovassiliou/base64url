@@ -32,11 +32,11 @@ Usage:	base64url [-hvDd] [-b num] [-i in_file] [-o out_file]
 var conf = config{}
 
 //set this via ldflags (see https://stackoverflow.com/q/11354518)
-const pVersion = ".1"
+const pVersion = ".0"
 
 // version is the current version number as tagged via git tag 1.0.0 -m 'A message'
 var (
-	version  = "0.1" + pVersion + "-src"
+	version  = "1.0" + pVersion + "-src"
 	commit   string
 	branch   string
 	repoName string = "github.com/theovassiliou/base64url"
