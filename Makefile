@@ -98,6 +98,18 @@ check: fmtcheck vet
 test-all: fmtcheck vet
 	go test `go list`
 
+.PHONY: package
+package:
+	./scripts/build.py --package --platform=all --arch=all
+
+.PHONY: package-release
+package-release:
+	./scripts/build.py --release --package --platform=all --arch=all
+
+.PHONY: package-nightly
+package-nightly:
+	./scripts/build.py --nightly --package --platform=all --arch=all 
+
 .PHONY: clean
 clean:
 	rm -f base64url
